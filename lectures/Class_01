@@ -1,0 +1,48 @@
+
+# How to set the Jdk in windows
+
+1. Download jdk from from URL https://www.oracle.com/java/technologies/javase-downloads.html4
+2. Go to Java SE Development Kit 8u351
+3. Go to Windows tab and download the jdk as per your laptop configuration
+4.  When you click on the Installation link the popup will be open. Click on I reviewed and accept the Oracle
+Technology Network License Agreement for Oracle Java SE development kit and you will be redirected to the login page.
+If you don’t have an oracle account you can easily sign up by adding basics details of yours.
+5. Once the Java JDK 8 download is complete, run the exe for install JDK. Click Next
+
+
+#How to set Environment Variables for Java: Path and Classpath
+
+1. Right Click on the My Computer and Select the properties
+2. Click on Advanced system Settings
+3. Click on Environment Variables to set Java runtime environment in Advanced tab
+4. Go to System variable
+5. Click New button
+6. Set variable name as JAVA_HOME and Variable Value as C:\Program Files\Java\jdk1.8.0_121
+7. click edit button on Path of System Variable
+8. Click New button and paste the value as C:\Program Files\Java\jdk1.8.0_121
+9. Click Ok button
+
+# How to set the environment variable for the Maven path: Path and Classpath
+
+1. Download maven from from URL https://maven.apache.org/download.cgi
+2. Click on link apache-maven-3.8.6-bin.tar.gz
+3. Right Click on the My Computer and Select the properties
+4. Click on Advanced system Settings
+5. Click on Environment Variables to set Java runtime environment in Advanced tab
+6. Go to System variable
+7. Click New button
+8. Set variable name as MAVEN_HOME and Variable Value as C:\Users\Akhil\Downloads\apache-maven-3.8.6
+9. click edit button on Path of System Variable
+10. Click New button and paste the value as C:\Users\Akhil\Downloads\apache-maven-3.8.6
+11. Click Ok button
+
+# How to set the git variable in Path and Classpath
+
+1. Right Click on the My Computer and Select the properties
+2. Click on Advanced system Settings
+3. Click on Environment Variables to set Java runtime environment in Advanced tab
+4. Go to System variable
+5. click edit button on Path of System Variable
+6. Click New button and paste the value as C:\Program Files\Git\bin;C:\Program Files\Git\cmd
+7. Click on button
+
