@@ -46,3 +46,12 @@ If you don’t have an oracle account you can easily sign up by adding basics de
 6. Click New button and paste the value as C:\Program Files\Git\bin;C:\Program Files\Git\cmd
 7. Click on button
 
+#Git Commands
+There will be two words
+remote word means the code is present in git repo and visible to all
+local word means the code is present in only your machine and not visible to
+1. git fetch --all   -->This will take all the remote branches/tags in local machine
+2. git pull origin main  --> This will take the latest code from main branch
+3. git commit -m "text message"  --> This will commit your changes with message but it will not push the code in remote
+4. git push --> This will push the code in remote
+
