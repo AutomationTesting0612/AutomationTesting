@@ -1,0 +1,35 @@
+
+1. Java is a programming language and a platform.
+2. Any hardware and software environment in which program runs is known as platform.
+
+   Features of Java
+
+1. Platform Independent :- When Java program runs, the java compiler create the bytecode(.class file). JVM execute this byte code and run the program.
+
+    HelloWorld.java -----javac ---HelloWorld.class(bytecode)------JVM-----mac, windows, safari.
+
+javac compiling the HelloWorld.java class and generate teh byte code. Now JVM runs this byte code in different operating system.
+
+
+2. Secured :- Java provides the security using the String class.
+
+3. Object Oriented :- Everything in java is in form of object.
+
+
+---------------------------JVM/JRE/JDK----------------------------------
+
+JVM :- a) JVM is java virtual machine which doesn't physical exist.4
+b) It provides the environment in which byte code gets execute.
+
+
+JRE :- JRE is Java Runtime environment which has all the libraries of java.
+
+JDK : a) JDK is a java development kit
+b) JDK = JVM + JRE
+
+
+
+
+.
+
+
