@@ -1,0 +1,62 @@
+1. Variable is container in which value can be stored.
+2. There are three types of variables
+
+2.a) Local Variable
+2.b) Class Instance Variable
+2.c) Reference variable
+
+
+Local Variable :- Local Variable is variable which is defined inside the method(sum()) and the scope of the variable within the method only. e.g s1, s2, m1, m2
+
+int s1 = 10;
+
+int:- is DataType
+s1:- variable name
+10:- value
+
+Class reference variable :- The variable which is defined at class reference level and all the methods can access this variable.
+
+Instance Variable:- The variable in which newly object created stored is called as Instance Variable
+
+Pen p1 = new Pen();
+
+p1 is instance variable
+
+
+
+example:- if int s1 is defined under sum() method
+
+public class HelloWorld {
+
+   int refVariable; //class reference variable
+
+    public static void main(String args[]) {
+
+        System.out.println("My First Program");
+
+        multiply();
+    }
+
+    public static void sum() {
+        int s1=30; //local variable
+        int s2=60; //local variable
+        int sum;
+        sum=s1+s2;
+        System.out.println(sum);
+    }
+
+    public static void multiply(){
+        int m1=30;
+        int m2=60;
+        int multiply;
+        multiply=s1*s2;
+        System.out.println(multiply);
+
+        sum();
+
+
+    }
+
+}
+
+

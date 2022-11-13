@@ -1,0 +1,17 @@
+
+OOPs
+
+a) Object Oriented Programming is a methodology to design a program using object and classes
+b) It simplifies the software development and maintenance by providing the below defined concepts:
+
+  a) Class:-
+       1. Class is a blueprint from which you can create an object
+       2. The instruction to create an object is present in class
+       3. Class doesn't not exist. It has properties( variables) and functions(methods).
+
+  b) Object:-
+       1. An entity that has state and behavior is known as object.
+       2. For Example:- A dog is an object because is has state like color, name, breed etc and fucntions as wagging the tail, barking, eating etc.
+
+
+

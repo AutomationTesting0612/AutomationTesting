@@ -1,0 +1,46 @@
+
+Memory Management
+
+1. Stack :-
+a) Stack is memory which works on LIFO(Last in First Out). It means the value which will will assign at last will be removed first.
+b) Local variable are stored in stack
+c) Methods are stored in stack
+d) instance variable are stored in stack i.e p1
+  Pen p1 = ne Pen();
+
+
+2. Heap
+
+a) Class reference variables are stored in Heap memory.
+b) When we create an object, the object is stored in heap. i.e new Pen() will be stored in heap
+e.g
+   Pen p1 = new Pen();
+
+3. Meta Space
+
+a) All the static Variables are stored in meta space
+ i.e static int s1 =20;
+
+b) All the static methods are stored in meta space
+i.e public static void sum(){
+}
+
+3. SCP
+
+a) SCP is String Constant pool
+b) When we create String literals, the it stores in the SCP. i.e "Automation Testing" will be store in SCP
+   String literal :- String s1 = "Automation Testing"
+    s1 will store in stack
+c) When we create a new String literal with different variable name s3 and having same value, then it will not create new object in SCP.
+
+    String s2 = "Automation Testing"
+
+    s2 will point to the existing object "Automation Testing" in SCP
+
+
+
+
+
+
+
+

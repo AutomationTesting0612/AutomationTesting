@@ -31,7 +31,7 @@ public class HelloWorld {
         int s2=60;
         int multiply;
         multiply=s1*s2;
-        System.out.println(s1*s2);
+        System.out.println(multiply);
 
         sum();
 
