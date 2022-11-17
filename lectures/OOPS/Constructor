@@ -1,0 +1,50 @@
+Constructor
+
+a) Constructor is a special method which is called automatically at the time of object creation.
+b) It is used to initialize the data members of new objects genrally.
+  1. Constructor have a same same as class name
+  2. Constructor doesn't have return type
+  3. Constructor only called once at the time of object creation.
+
+
+There are three types of constructor
+
+a). Non-Parameterized constructor:- A constructor which has no argument is known as non-parameterized constructor.
+2. If we don't create then it is created by default.
+3. It is invoked at the time of creating an object.
+
+    class Person {
+       String name;
+       int age;
+       Person() {    //Non-Parametrized constructor
+         System.out.println("Constructor called");
+                }
+             }
+
+b) Parameterized Constructor:-
+      1. Constructor which has parameter is called as parameterized constructor.
+      2. It is used to provide different value to distinct objects.
+
+       class Person {
+              String name;
+              int age;
+              Person(String name, int age) {    //Parametrized constructor
+                   this.name=name;
+                   this.age=age;
+                       }
+             }
+
+c) Copy Constructor:-
+
+     1. A copy Constructor is an overloaded constructor used to declare and initialize an object from another object
+
+           class Person {
+                 String name;
+                 int age;
+                 Person(Person p2) {    //Parametrized constructor
+                   this.name= p2.name;
+                   this.age= p2.age
+                     }
+                }
+
+
