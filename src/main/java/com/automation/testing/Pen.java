@@ -12,10 +12,10 @@ package com.automation.testing;
  class Student {
 
 
-     String name;
+     String name; //object
      int age;
 
-     public void printInfo() {
+     public void printInfo() { //method
          System.out.println(this.name);
          System.out.println(this.age);
 
@@ -25,15 +25,10 @@ package com.automation.testing;
          System.out.println("Constructor Called...");
      }
 
-     Student(String name, int age) { //Parameterized Constructor
-         this.age=age;
-         this.name=name;
+     Student(String name1, int age1) { //Parameterized Constructor
+         this.age=age1;
+         this.name=name1;
      }
-
-
-
-
-
 }
 
 class OOPs {

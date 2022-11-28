@@ -8,8 +8,6 @@ public class MyStepdefs {
     @Given("^Open the browser$")
     public void openTheBrowser() {
 
-        System.out.println("AutomationTest1");
-
     }
 
     @When("^Enter the URL$")
