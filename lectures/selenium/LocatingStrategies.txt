@@ -1,0 +1,10 @@
+WebDriver uses the set of locating strategies for specifying location of a particular wen element
+
+1. By ID
+2. By Name
+3. By Class Name
+4. By Tag Name
+5. By Link Text
+6. By Partial Link Text
+7. By CSS
+8. By Xpath

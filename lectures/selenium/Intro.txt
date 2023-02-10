@@ -1,0 +1,26 @@
+1. Selenium is a suite of tools that helps in automating the web applications.
+2. The below mentioned tools are present in the selenium suite
+
+2.a ) Selenium IDE :- Selenium Integrated Development Environment (IDE) is a Firefox plugin that lets testers to record their actions as they follow the workflow that they need to test.
+2.b ) Selenium RC:- Selenium Remote Control is depricated
+2.c ) Selenium WebDriver :- Selenium RC + WebDriver = Selenium2.0 - Selenium WebDriver sends commands directly to the browser and retrieve results.
+2.d ) Selenium Grid :- Selenium Grid is a tool used to run parallel tests across different machines and different browsers simultaneously which results in minimized execution time.
+
+
+Selenium Advantages:
+
+1. Selenium is an open source and portable Web Testing Framework.
+2. Selenium IDE provides a playback and record feature without the knowledge of scripting language.
+3. Selenium Grid provides parallel test execution which reduce time.
+4. Selenium can be integrated with frameworks like maven for source code compilation.
+5. Selenium can also be integrated with testing framework TestNg and junit framework to run tests.
+
+
+Selenium Limitation
+
+1. Selenium does not support automation testing for desktop applications.
+2. We cannot perform automation tests on web services like SOAP or REST using Selenium.
+3. Selenium doesnot have in built reporting capabilities. We need to rely on Testng and JUnit plugins.
+4. It is not possible to perform testing on images.
+5. It is not possible to automate capacha using selenium.
+

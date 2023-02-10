@@ -1,0 +1,30 @@
+Steps to Launch the browser through script
+
+1. Add the selenium-java dependency
+2. Download the chromeDriver.exe from internet
+ Note :- The version of chromeDriver.exe should be same as your browser version
+3. Put the chromeDriver in your project directory
+4. Now create the object
+
+     WebDriver driver = new ChromeDriver();
+     System.setProperty("webdriver.chrome.driver","chromeDriver.exe");
+
+This Script will launch your browser in chrome
+
+Given Below are some of the most Commonly used Selenium commands
+
+1. driver.get("www.facebook.com");
+2. driver.navigate().to("www.facebook.com");
+3. driver.findElement(By.name("q")).clear();
+4. driver.findElement(By.name("q")).sendKeys("test");
+5. driver.findElement(By.name("q")).click();
+6. driver.getTitle();
+7. driver.navigate().refresh();
+8. driver.close();
+9. driver.quit();
+10. driver.switchTo().window("windowName");
+11. driver.switchTo().frame("frameName");
+12. WebElement element = driver.findElement(By.name("source"));
+     WebElement target = driver.findElement(By.name("target"));
+     new Actions(driver).dragAndDrop(element,target).perform();
+
