@@ -27,18 +27,5 @@ JRE :- JRE is Java Runtime environment which has all the libraries of java.
 JDK : a) JDK is a java development kit
 b) JDK = JVM + JRE
 
--------------------------Data Types-----------------------
-
-There are two types of Data Types
-
-1. Primitive Data Types
-2. Non Primitive Data Types
-
-
-1. Primitive Data Types :-
-a) Primitive data types specify the size and type of variable values.
-b) There are 8 types of Primitive data types in Java – Boolean, char, byte, int, short, long, float, and double
-
-
 
 
