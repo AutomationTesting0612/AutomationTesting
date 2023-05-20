@@ -1,14 +1,8 @@
 @Login @Regression
 Feature: Test login functionality
   Scenario: Test the login Functionality
-    Given Open the browser
-    When Enter the URL
-    Then Click the Submit button
+    When Enter the username
+    And Enter the password
+    And click on the login button
+    Then User should be able to navigate to the home page
 
-
-  Scenario: Check the Credentials
-    Given Open the browser
-    When Enter the URL
-    And Enter the username and password
-    When Click the Submit button
-    Then Validate the credentials

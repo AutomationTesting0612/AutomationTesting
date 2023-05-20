@@ -1,9 +1,11 @@
 package step.def;
 
-import cucumber.annotation.en.Given;
-import cucumber.annotation.en.Then;
+import cucumber.api.java.en.Given;
 
-public class HomeStepDef {
+import cucumber.api.java.en.Then;
+
+public class HomeStepDef extends TestBase {
+
     @Given("^Navigate to Home Page after Login$")
     public void navigateToHomePageAfterLogin() {
 
