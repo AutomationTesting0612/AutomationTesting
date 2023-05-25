@@ -1,14 +1,32 @@
 package runner;
 
-import cucumber.junit.Cucumber;
+import com.cucumber.listener.Reporter;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
+import java.io.*;
+
 @RunWith(Cucumber.class)
-@Cucumber.Options(dryRun = false, features = "features", glue = "step.def",
-        tags = "@Automation", format = {"pretty", "html:target/cucumber"}
+@CucumberOptions(dryRun = false, features = {"src/test/resources/features"}, glue = {"step.def"},
+        tags = "@Regression", plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
+        monochrome = true
 
 )
 public class Run {
+
+    @AfterClass
+    public static void writeExtentReport() throws FileNotFoundException {
+        try {
+            InputStream inputStream = new FileInputStream("C:\\Users\\HP\\IdeaProjects\\AutomationTesting\\src\\test\\folder\\config.xml");
+            Reporter.loadXMLConfig(inputStream.toString());
+        } catch (IllegalArgumentException io) {
+            io.printStackTrace();
+        }
+
+    }
 }
 
 
