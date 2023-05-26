@@ -12,7 +12,7 @@ RUN apt-get install -y p7zip \
     bzip2
 
 #Version numbers
-ARG CHROME_VERSION=google-chrome-stable_110.0.5481.100_amd64.deb
+ARG CHROME_VERSION=110.0.5481.177
 ARG CHROMDRIVER_VERSION=110.0.5481.30
 
 
