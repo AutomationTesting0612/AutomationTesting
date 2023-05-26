@@ -17,4 +17,7 @@ jobs:
         run: docker build -t my-cucumber-tests .
 
       - name: Run Docker container
-        run: docker run my-cucumber-tests
+        run: |
+          ls -ltr
+          docker run -it my-cucumber-tests
+#          docker cp target/cucumber-reports/report.html:/app
