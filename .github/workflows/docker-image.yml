@@ -16,7 +16,6 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t selenium-docker .
-#          docker run -p 8080:80 --name mycontainer selenium-docker
           mkdir reports
           ls -ltr
           echo "the container id is "
