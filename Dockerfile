@@ -40,9 +40,7 @@ RUN apt-get update && apt-get install -y maven
 #Making our working directory as /app
 WORKDIR /app
 
-COPY . /app
-
-COPY /app/bin/chromedriver /app
+COPY . /app/bin
 
 
 RUN mvn clean install
