@@ -50,19 +50,3 @@ RUN mvn clean install
 
 # Set the entry point for running the tests
 #CMD ["java", "-jar", "AutomationTesting-1.0-SNAPSHOT.jar"]
-
-
-RUN chmod 755 /app
-
-RUN chmod + *
-
-COPY ./target/cucumber-reports/report.html /usr/share/nginx/html
-
-# Install a web server (example using Nginx)
-RUN apt-get update && apt-get install -y nginx
-
-# Expose the web server port
-EXPOSE 80
-
-# Start the web server
-CMD ["nginx", "-g", "daemon off;"]
