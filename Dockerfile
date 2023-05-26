@@ -5,7 +5,7 @@ FROM adoptopenjdk:8-jdk-hotspot
 WORKDIR /app
 
 # Copy the Selenium script and any required dependencies to the container
-COPY --from=build /app/target/AutomationTesting-1.0-SNAPSHOT.jar .
+COPY ./AutomationTesting-1.0-SNAPSHOT.jar /app/AutomationTesting-1.0-SNAPSHOT.jar
 
 RUN cd /app
 
