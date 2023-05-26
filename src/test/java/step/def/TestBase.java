@@ -2,6 +2,7 @@ package step.def;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -24,7 +25,7 @@ public class TestBase {
            properties.load(file);
        }
        if (properties.getProperty("browser").equalsIgnoreCase("chrome")) {
-           System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+           ChromeDriverManager.chromedriver().setup();
            ChromeOptions options = new ChromeOptions();
            options.addArguments("--headless");
            options.addArguments("--remote-allow-origins=*");
