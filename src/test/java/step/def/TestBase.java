@@ -28,6 +28,7 @@ public class TestBase {
            ChromeOptions options = new ChromeOptions();
            options.addArguments("--headless");
            options.addArguments("--remote-allow-origins=*");
+           options.addArguments("--headless");
            driver = new ChromeDriver(options);
            driver.get(properties.getProperty("url"));
        }

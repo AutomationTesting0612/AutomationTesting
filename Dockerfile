@@ -12,7 +12,7 @@ RUN apt-get install -y p7zip \
     bzip2
 
 #Version numbers
-ARG CHROME_VERSION=113.0.4103.116
+ARG CHROME_VERSION=113.0.5672.24
 ARG CHROMDRIVER_VERSION=113.0.5672.24
 
 
