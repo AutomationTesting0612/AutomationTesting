@@ -40,7 +40,7 @@ RUN apt-get update && apt-get install -y maven
 #Making our working directory as /app
 WORKDIR /app
 
-COPY . /app/bin
+COPY . /app
 
 
 RUN mvn clean install
