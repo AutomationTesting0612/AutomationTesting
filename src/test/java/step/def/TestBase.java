@@ -29,7 +29,8 @@ public class TestBase {
            ChromeOptions options = new ChromeOptions();
            options.addArguments("--headless");
            options.addArguments("--remote-allow-origins=*");
-           options.addArguments("--headless");
+           options.addArguments("--ignore-ssl-errors=ye");
+           options.addArguments("--ignore-certificate-errors");
            driver = new ChromeDriver(options);
            driver.get(properties.getProperty("url"));
        }
