@@ -48,6 +48,10 @@ COPY . /app
 
 RUN mvn clean install
 
+# Set the entry point for running the tests
+CMD ["java", "-jar", "AutomationTesting-1.0-SNAPSHOT.jar"]
+
+
 RUN ls -ltr
 
 COPY ./report.html /usr/share/nginx/html
