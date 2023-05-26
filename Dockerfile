@@ -33,11 +33,11 @@ RUN chmod +x /app/bin/chromedriver
 # Download and install the appropriate WebDriver for the desired browser (e.g., Chrome)
 RUN apt-get update && apt-get install -y curl unzip
 
-RUN mvn clean install
-
 
 # Install Maven
 RUN apt-get update && apt-get install -y maven
+
+RUN mvn clean install
 
 # Set the entry point for running the tests
 CMD ["java", "-jar", "AutomationTesting-1.0-SNAPSHOT.jar"]
