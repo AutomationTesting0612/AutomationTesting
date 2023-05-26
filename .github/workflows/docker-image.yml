@@ -23,12 +23,6 @@ jobs:
         run: |
           mkdir reports
           docker cp mycontainer:app/target/cucumber-reports/report.html reports/
-          sleep 180
-
-      - name: test results
-        uses: dorny/test-reporter@v1
-        with:
-          artifact: AutomationTesting            # artifact name
-          name: Cucumber Report                  # Name of the check run which will be created
-          path: reports                     # Path to test results (inside artifact .zip)
-          reporter: jest-junit
+          docker ps
+          exit
+          docker cp 5092992624:app/target/cucumber-reports/report.html reports/
