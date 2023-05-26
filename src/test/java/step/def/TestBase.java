@@ -20,7 +20,7 @@ public class TestBase {
 
     public void setup() throws IOException {
        if (driver==null) {
-           file = new FileInputStream("C:\\Users\\HP\\IdeaProjects\\AutomationTesting\\application.properties");
+           file = new FileInputStream("application.properties");
            properties.load(file);
        }
        if (properties.getProperty("browser").equalsIgnoreCase("chrome")) {

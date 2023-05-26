@@ -20,7 +20,7 @@ public class Run {
     @AfterClass
     public static void writeExtentReport() throws FileNotFoundException {
         try {
-            InputStream inputStream = new FileInputStream("C:\\Users\\HP\\IdeaProjects\\AutomationTesting\\src\\test\\folder\\config.xml");
+            InputStream inputStream = new FileInputStream("config.xml");
             Reporter.loadXMLConfig(inputStream.toString());
         } catch (IllegalArgumentException io) {
             io.printStackTrace();
