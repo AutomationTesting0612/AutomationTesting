@@ -17,5 +17,7 @@ jobs:
         run: |
           docker build -t selenium-docker .
           docker run selenium-docker
+          cd target/cucumber-reports
+          ls -ltr
           docker cp `docker ps -l -q`:/app/target/cucumber-report/report.html docker-html-report.html
 
