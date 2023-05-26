@@ -13,7 +13,7 @@ RUN apt-get install -y p7zip \
 
 #Version numbers
 ARG CHROME_VERSION=113.0.4103.116
-ARG CHROMDRIVER_VERSION=113.0.5672.126
+ARG CHROMDRIVER_VERSION=113.0.5672.24
 
 
 #Step 2: Install Chrome
