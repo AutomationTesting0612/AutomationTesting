@@ -46,8 +46,7 @@ WORKDIR /app
 
 COPY . /app
 
-# Set the entry point for running the tests
-CMD ["mvn", "install"]
+RUN mvn clean install
 
 RUN ls -ltr
 
