@@ -49,3 +49,13 @@ COPY . /app
 # Set the entry point for running the tests
 CMD ["mvn", "install"]
 
+COPY ./target/cucumber-reports /usr/share/nginx/html
+
+# Install a web server (example using Nginx)
+RUN apt-get update && apt-get install -y nginx
+
+# Expose the web server port
+EXPOSE 80
+
+# Start the web server
+CMD ["nginx", "-g", "daemon off;"]

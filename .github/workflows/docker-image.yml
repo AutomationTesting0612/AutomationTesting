@@ -19,5 +19,5 @@ jobs:
       - name: Run Docker container
         run: |
           ls -ltr
-          docker run -it my-cucumber-tests
-#          docker cp target/cucumber-reports/report.html:/app
+          docker run --rm my-cucumber-tests
+
