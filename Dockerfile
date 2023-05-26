@@ -7,6 +7,8 @@ WORKDIR /app
 # Copy the Selenium script and any required dependencies to the container
 COPY . /app
 
+COPY chromedriver.exe /app/chromedriver.exe
+
 RUN chmod +x /app/chromedriver.exe
 
 # Download and install the appropriate WebDriver for the desired browser (e.g., Chrome)
