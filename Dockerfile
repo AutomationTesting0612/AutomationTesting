@@ -42,6 +42,8 @@ WORKDIR /app
 
 COPY . /app
 
+COPY /app/bin/chromedriver /app
+
 
 RUN mvn clean install
 
