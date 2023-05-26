@@ -17,12 +17,9 @@ jobs:
         run: |
           docker build -t selenium-docker .
           docker run -p 8080:80 --name mycontainer selenium-docker
-          ls -ltr
-
-      - name: Download report artifact
-        run: |
           mkdir reports
-          docker cp mycontainer:app/target/cucumber-reports/report.html reports/
+          ls -ltr
           docker ps
+          docker container ls
           exit
-          docker cp 5092992624:app/target/cucumber-reports/report.html reports/
+          docker cp c5d407310c2a:app/target/cucumber-reports/report.html reports/
