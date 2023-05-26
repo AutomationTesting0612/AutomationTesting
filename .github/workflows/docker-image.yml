@@ -19,7 +19,10 @@ jobs:
           docker run -p 8080:80 --name mycontainer selenium-docker
           mkdir reports
           ls -ltr
+          echo "the container id is "
           docker ps
           docker container ls
           exit
           docker cp c5d407310c2a:app/target/cucumber-reports/report.html reports/
+          cd reports
+          ls -ltr
