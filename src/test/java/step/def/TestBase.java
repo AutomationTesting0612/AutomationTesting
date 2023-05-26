@@ -31,6 +31,9 @@ public class TestBase {
            options.addArguments("--remote-allow-origins=*");
            options.addArguments("--ignore-ssl-errors=ye");
            options.addArguments("--ignore-certificate-errors");
+           options.addArguments("--no-sandbox");
+           options.addArguments("--disable-dev-shm-usage");
+           options.addArguments("start-maximized");
            driver = new ChromeDriver(options);
            driver.get(properties.getProperty("url"));
        }
