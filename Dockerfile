@@ -12,7 +12,7 @@ RUN apt-get install -y p7zip \
     bzip2
 
 #Version numbers
-ARG CHROME_VERSION=110.0.5481.30
+ARG CHROME_VERSION=110.0.5481.100-1
 ARG CHROMDRIVER_VERSION=110.0.5481.30
 
 
@@ -20,8 +20,8 @@ ARG CHROMDRIVER_VERSION=110.0.5481.30
 RUN apt-get install -y wget
 RUN apt-get update && apt-get install -y gnupg
 RUN apt-get update && apt-get install -y wget gnupg2
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-RUN echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+ && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
 RUN apt-get update && apt-get install -y google-chrome-stable=$CHROME_VERSION
 
 #Step 3: Install chromedriver for Selenium
