@@ -1,3 +1,6 @@
-utility\Utility.class
+step\def\RegisterStepdef.class
+step\def\HomeStepDef.class
+step\def\TestBase.class
 runner\Run.class
-step\def\MyStepdefs.class
+utils\Utility.class
+step\def\LoginStepDef.class
