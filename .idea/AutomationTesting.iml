@@ -85,6 +85,7 @@
     <orderEntry type="library" name="Maven: io.netty:netty-transport-native-kqueue:osx-x86_64:4.1.60.Final" level="project" />
     <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
     <orderEntry type="library" name="Maven: com.typesafe.netty:netty-reactive-streams:2.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
     <orderEntry type="library" name="Maven: com.sun.activation:jakarta.activation:1.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-manager:4.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-safari-driver:4.8.1" level="project" />
@@ -102,12 +103,5 @@
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.5.2" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.9.2" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.0" level="project" />
-    <orderEntry type="library" name="Maven: io.github.bonigarcia:webdrivermanager:1.7.2" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.24" level="project" />
-    <orderEntry type="library" name="Maven: commons-io:commons-io:2.5" level="project" />
-    <orderEntry type="library" name="Maven: com.typesafe:config:1.2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.5" level="project" />
-    <orderEntry type="library" name="Maven: org.rauschig:jarchivelib:0.7.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-compress:1.9" level="project" />
   </component>
 </module>
