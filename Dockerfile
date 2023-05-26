@@ -19,9 +19,9 @@ ARG CHROMDRIVER_VERSION=110.0.5481.30
 #Step 2: Install Chrome
 RUN apt-get install -y wget
 RUN apt-get update && apt-get install -y gnupg
-RUN wget --no-verbose -O /tmp/chrome.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}_amd64.deb \
-  && apt install -y /tmp/chrome.deb \
-  && rm /tmp/chrome.deb
+RUN wget --no-check-certificate https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}_amd64.deb
+RUN dpkg -i google-chrome-stable_${CHROME_VERSION}_amd64.deb || apt -y -f install
+RUN rm google-chrome-stable_${CHROME_VERSION}_amd64.deb;
 
 #Step 3: Install chromedriver for Selenium
 RUN mkdir -p /app/bin
