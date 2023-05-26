@@ -16,8 +16,12 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t selenium-docker .
-          docker run selenium-docker
-          cd /app/target/cucumber-reports
-          ls -ltr
-          docker cp `docker ps -l -q`:/app/target/cucumber-report/report.html docker-html-report.html
+          docker run -p 8080:80 --name mycontainer selenium-docker
 
+      - name: Download report artifact
+        run: |
+          mkdir reports
+          docker cp mycontainer:/target/cucumber-reports/report.html reports/
+        artifacts:
+          paths:
+            - reports
