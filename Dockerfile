@@ -5,7 +5,7 @@ FROM adoptopenjdk:8-jdk-hotspot
 WORKDIR /app
 
 # Copy the Selenium script and any required dependencies to the container
-COPY ./app
+COPY . /app
 
 RUN cd /app
 
