@@ -23,7 +23,7 @@ jobs:
         run: |
           mkdir reports
           docker cp mycontainer:app/target/cucumber-reports/report.html reports/
-          Thread.sleep(30000L)
+          sleep 180
 
       - name: test results
         uses: dorny/test-reporter@v1
