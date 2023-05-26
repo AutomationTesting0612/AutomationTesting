@@ -8,12 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Download and install the appropriate WebDriver for the desired browser (e.g., Chrome)
-RUN apt-get update && apt-get install -y curl unzip \
-    && curl -sS -o chromedriver_win32.zip https://chromedriver.storage.googleapis.com/104.0.5112.29/chromedriver_win32.zip \
-    && unzip chromedriver_win32.zip \
-    && rm chromedriver_win32.zip \
-    && mv chromedriver.exe /usr/local/bin \
-    && chmod +x /usr/local/bin/chromedriver.exe
+RUN apt-get update && apt-get install -y curl unzip
 
 
 # Install Maven
