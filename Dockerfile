@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy the Selenium script and any required dependencies to the container
 COPY . /app
 
-COPY chromedriver /app/chromedriver
+ls -a
 
 RUN chmod +x /app/chromedriver
 
