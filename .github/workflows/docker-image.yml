@@ -17,11 +17,12 @@ jobs:
         run: |
           docker build -t selenium-docker .
           docker run -p 8080:80 --name mycontainer selenium-docker
+          ls -ltr
 
       - name: Download report artifact
         run: |
           mkdir reports
-          docker cp mycontainer:/target/cucumber-reports/report.html reports/
+          docker cp mycontainer:app/target/cucumber-reports/report.html reports/
 
       - name: test results
         uses: dorny/test-reporter@v1
