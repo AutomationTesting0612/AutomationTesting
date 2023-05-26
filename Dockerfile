@@ -5,7 +5,7 @@ FROM adoptopenjdk:8-jdk-hotspot
 WORKDIR /app
 
 # Copy the Selenium script and any required dependencies to the container
-COPY ./AutomationTesting-1.0-SNAPSHOT.jar /app
+COPY --from=build /app/target/AutomationTesting-1.0-SNAPSHOT.jar .
 
 RUN cd /app
 
@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y curl unzip
 # Install Maven
 RUN apt-get update && apt-get install -y maven
 
-RUN mvn clean install
-
 # Set the entry point for running the tests
-CMD ["mvn", "verify"]
+CMD ["java", "-jar", "AutomationTesting-1.0-SNAPSHOT.jar"]
+
+RUN mvn clean install
