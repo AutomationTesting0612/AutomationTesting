@@ -26,6 +26,7 @@ public class TestBase {
        if (properties.getProperty("browser").equalsIgnoreCase("chrome")) {
            System.setProperty("webdriver.chrome.driver","chromedriver.exe");
            ChromeOptions options = new ChromeOptions();
+           options.addArguments("--headless");
            options.addArguments("--remote-allow-origins=*");
            driver = new ChromeDriver(options);
            driver.get(properties.getProperty("url"));
