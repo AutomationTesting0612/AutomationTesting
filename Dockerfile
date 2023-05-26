@@ -37,6 +37,12 @@ RUN apt-get update && apt-get install -y curl unzip
 # Install Maven
 RUN apt-get update && apt-get install -y maven
 
+#Making our working directory as /app
+WORKDIR /app
+
+COPY . /app
+
+
 RUN mvn clean install
 
 # Set the entry point for running the tests
