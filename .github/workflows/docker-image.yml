@@ -27,7 +27,7 @@ jobs:
       - name: test results
         uses: dorny/test-reporter@v1
         with:
-          artifact: test-results            # artifact name
+          artifact: AutomationTesting            # artifact name
           name: Cucumber Report                  # Name of the check run which will be created
           path: reports                     # Path to test results (inside artifact .zip)
           reporter: jest-junit
