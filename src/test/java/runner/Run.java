@@ -12,15 +12,15 @@ import org.junit.runner.RunWith;
 import java.io.*;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(dryRun = false, features = {"src/test/resources/features"}, glue = {"step.def"},
-        tags = "@Regression", plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
+@CucumberOptions(features = {"src/test/resources/features"}, glue = {"step.def"},
+        tags = "@Regression", plugin = {"com.cucumber.listener.ExtentCucumberFormatter:report.html"},
         monochrome = true
 
 )
 public class Run {
 
     @AfterClass
-    public static void writeExtentReport() throws FileNotFoundException {
+    public static void writeExtentReport() {
         try {
             InputStream inputStream = Files.newInputStream(Paths.get("config.xml"));
             Reporter.loadXMLConfig(inputStream.toString());

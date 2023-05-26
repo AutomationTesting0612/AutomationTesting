@@ -51,7 +51,7 @@ CMD ["mvn", "install"]
 
 RUN ls -ltr
 
-COPY ./target/cucumber-reports/report.html /usr/share/nginx/html
+COPY ./report.html /usr/share/nginx/html
 
 # Install a web server (example using Nginx)
 RUN apt-get update && apt-get install -y nginx
