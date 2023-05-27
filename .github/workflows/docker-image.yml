@@ -16,12 +16,5 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t selenium-docker .
-          mkdir reports
-          ls -ltr
-          echo "the container id is "
-          docker ps
-          docker container ls
-          exit
-          docker cp c5d407310c2a:app/target/cucumber-reports/report.html reports/
-          cd reports
-          ls -ltr
+          docker run -p 8080:80 --name mycontainer selenium-docker
+          docker cp mycontainer:app/target/cucumber-reports/report.html ${{ github.workspace }}/report
