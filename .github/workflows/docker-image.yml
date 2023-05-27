@@ -17,6 +17,8 @@ jobs:
         run: |
           docker build -t selenium-docker .
           docker run -p 8080:80 --name mycontainer selenium-docker
-          docker cp mycontainer:app/target/cucumber-reports/report.html ${{ github.workspace }}/report
-          cd ${{ github.workspace }}/report
-          ls -ltr
+          docker cp mycontainer:app/target/cucumber-reports/report.html ${{ github.workspace }}/report/report.html
+          git status
+          git add .
+          git commit -a -m "added report"
+          git push
