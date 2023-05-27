@@ -18,7 +18,6 @@ jobs:
           docker build -t selenium-docker .
           docker run -p 8080:80 --name mycontainer selenium-docker
           docker cp mycontainer:app/target/cucumber-reports/report.html ${{ github.workspace }}/report/report.html
-          docker cp mycontainer:app/target/cucumber-reports/report.html ~/.Desktop/report/report.html
           git status
           git config --global user.email "automationtesting0612@gmail.com"
           git config --global user.name "automationtesting0612"
