@@ -18,15 +18,6 @@ jobs:
           docker build -t selenium-docker .
           docker run -p 8080:80 --name mycontainer selenium-docker
           docker cp mycontainer:app/target/cucumber-reports/report.html ${{ github.workspace }}/report/report.html
-          sudo apt-get install -y git=1:2.34.1-1ubuntu1.6 git-email
-          git config --global --edit
-          ...
-          ...
-          [sendemail]
-              smtpserver = smtp.googlemail.com
-              smtpencryption = tls
-              smtpserverport = 587
-              smtpuser = automationtesting0612@gmail.com
           git status
           git config --global user.email "automationtesting0612@gmail.com"
           git config --global user.name "automationtesting0612"
@@ -34,4 +25,3 @@ jobs:
           git commit -a -m "added report"
           git format-patch --to=akhil.sharma0612@gmail.com HEAD~..HEAD
           git push
-          git send-email --to=akhil.sharma0612@gmail.com ${{ github.workspace }}/report/report.html
