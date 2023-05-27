@@ -50,3 +50,6 @@ RUN mvn clean install
 
 # Set the entry point for running the tests
 #CMD ["java", "-jar", "AutomationTesting-1.0-SNAPSHOT.jar"]
+
+RUN docker ps
+RUN docker container ls
