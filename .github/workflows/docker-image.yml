@@ -18,11 +18,11 @@ jobs:
           docker build -t selenium-docker .
           docker run -p 8080:80 --name mycontainer selenium-docker
           docker cp mycontainer:app/target/cucumber-reports/report.html ${{ github.workspace }}/report/report.html
-          docker cp mycontainer:app/target/cucumber-reports/report.html ~/Desktop/report/report.html
+          docker cp mycontainer:app/target/cucumber-reports/report.html ~/.Desktop/report/report.html
           git status
           git config --global user.email "automationtesting0612@gmail.com"
           git config --global user.name "automationtesting0612"
           git add .
           git commit -a -m "added report"
           git push
-          git send-email --to=akhil.sharma0612@gmail.com ~/Desktop/report/report.html
+          git send-email --to=akhil.sharma0612@gmail.com ${{ github.workspace }}/report/report.html
