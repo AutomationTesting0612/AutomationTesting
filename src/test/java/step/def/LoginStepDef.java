@@ -12,15 +12,7 @@ import java.io.IOException;
 
 public class LoginStepDef extends TestBase {
 
-    @Before
-    public void init() throws IOException {
-        setup();
-    }
 
-    @After
-    public void quit() {
-        tearDown();
-    }
 
     @And("^Enter the password$")
     public void enterThePassword() {

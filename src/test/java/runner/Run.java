@@ -13,7 +13,7 @@ import java.io.*;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(dryRun = false, features = {"src/test/resources/features"}, glue = {"step.def"},
-        tags = "@Regression", plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
+        tags = "@Home", plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
         monochrome = true
 
 )
