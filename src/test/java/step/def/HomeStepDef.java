@@ -16,11 +16,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.time.temporal.TemporalUnit;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 public class HomeStepDef extends TestBase {
 
-    int count=0; //class reference variable
+    int count=0; //class reference variable or data member
 
     @Then("^validate the title$")
     public void validateTheTitle() {
@@ -78,5 +79,19 @@ public class HomeStepDef extends TestBase {
     @And("^Click on the Checkout button$")
     public void clickOnTheCheckoutButton() {
         driver.findElement(By.xpath(properties.getProperty("checkoutButton"))).click();
+    }
+
+    @And("^Handle the exception$")
+    public void handleTheException() {
+        try {
+            driver.findElement(By.xpath(properties.getProperty("zzzzz")));
+        } catch (Exception e) {
+            e.getMessage();
+        }
+
+    }
+
+    @And("^Enter the details in checkout page$")
+    public void enterTheDetailsInCheckoutPage() {
     }
 }
