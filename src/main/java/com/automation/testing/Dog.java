@@ -1,23 +1,19 @@
 package com.automation.testing;
 
-public class Dog implements Animal{
+public class Dog {
 
-    @Override
-    public void speak() {
+    String bread; //Data members
+    int size; //Data members
+    int age; //Data members
+    String color; //Data members
 
-        System.out.println("Dog bark");
-
+    public void eat() { //methods
+    }
+    public void sleep() {
+    }
+    public void sit() {
+    }
+    public void run() {
     }
 
-    @Override
-    public void smell() {
-
-        System.out.println("Dog smell");
-
-    }
-
-    @Override
-    public void speed() {
-        System.out.println("The speed of dog is 45km/h");
-    }
 }

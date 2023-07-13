@@ -6,7 +6,7 @@ a) Stack is memory which works on LIFO(Last in First Out). It means the value wh
 b) Local variable are stored in stack
 c) Methods are stored in stack
 d) instance variable are stored in stack i.e p1
-  Pen p1 = ne Pen();
+  Pen p1 = new Pen();
 
 
 2. Heap

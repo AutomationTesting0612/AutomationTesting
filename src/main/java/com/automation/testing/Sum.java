@@ -1,14 +1,21 @@
 package com.automation.testing;
 
-public class Sum {
+import com.automation.classes.MathematicProblem;
+
+public class Sum extends MathematicProblem{
 
     static int num1=3;
     static int num2=5;
-    static int num3=8;
 
     static int sum;
 
     public static void main(String[] args) {
+
+       MathematicProblem problem = new  MathematicProblem();
+       problem.sum();
+       problem.num2=90;
+
+
 
         sum=num1+num2;
 
