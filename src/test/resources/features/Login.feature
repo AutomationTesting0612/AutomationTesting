@@ -1,4 +1,5 @@
 @Login @Regression
+@Sanity
 Feature: Test login functionality
   Scenario: Test the login Functionality
     When Enter the username

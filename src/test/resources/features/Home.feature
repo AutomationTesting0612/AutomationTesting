@@ -9,7 +9,9 @@ Feature: Home Page functionality
 
   Scenario: Verify user should be able to navigate to home page
     Then validate the title
-@1111
+
+
+@Sanity
   Scenario: Verify user should be able to navigate to home page
     When User is clicking on all the Add To Cart button
     Then Add To Cart Button text should be display as Remove button
@@ -18,3 +20,18 @@ Feature: Home Page functionality
     And Click on the Checkout button
     And Handle the exception
     And Enter the details in checkout page
+
+
+  Scenario Outline: Verify user should be able to enter the data in Checkout: Your Information
+    When User is clicking on checkout icon
+    And click on checkout button
+    And Enter the Customer details "<firstName>","<lastName>","<zipCode>"
+
+    Examples:
+    |firstName | lastName | zipCode |
+    |Test      |Selenium  |12345    |
+
+
+
+
+

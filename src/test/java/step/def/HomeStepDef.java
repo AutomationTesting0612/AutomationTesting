@@ -1,5 +1,6 @@
 package step.def;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 
@@ -34,7 +35,7 @@ public class HomeStepDef extends TestBase {
     @When("^User is clicking on all the Add To Cart button$")
     public void userIsClickingOnAllTheAddToCartButton() throws InterruptedException {
 
-        List<WebElement> element = driver.findElements(By.xpath(properties.getProperty("addToCartButtonXpath")));
+        List<WebElement> element = driver.findElements(By.xpath("//button[contains(text(),'Add to cart')]"));
 
         for (int i =0; i<element.size()-1;i++) {
             element.get(i).getText();
@@ -93,5 +94,26 @@ public class HomeStepDef extends TestBase {
 
     @And("^Enter the details in checkout page$")
     public void enterTheDetailsInCheckoutPage() {
+
+    }
+
+    @When("^User is clicking on checkout icon$")
+    public void userIsClickingOnCheckoutIcon() {
+        driver.findElement(By.xpath("//div[@id='shopping_cart_container']")).click();
+    }
+
+    @And("^click on checkout button$")
+    public void clickOnCheckoutButton() {
+        driver.findElement(By.xpath("//button[@id='checkout']")).click();
+    }
+
+    @And("^Enter the Customer details \"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\"$")
+    public void enterTheCustomerDetails(String firstName, String lastName, String zipCode) throws InterruptedException {
+
+        driver.findElement(By.xpath("//input[@id='first-name']")).sendKeys(firstName);
+        driver.findElement(By.xpath("//input[@id='last-name']")).sendKeys(lastName);
+        driver.findElement(By.xpath("//input[@id='postal-code']")).sendKeys(zipCode);
+
+        Thread.sleep(10000L);
     }
 }

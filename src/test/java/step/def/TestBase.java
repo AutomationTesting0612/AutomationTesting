@@ -27,7 +27,7 @@ public class TestBase {
        if (properties.getProperty("browser").equalsIgnoreCase("chrome")) {
            ChromeDriverManager.chromedriver().setup();
            ChromeOptions options = new ChromeOptions();
-//           options.addArguments("--headless");
+           options.addArguments("--headless");
            options.addArguments("--remote-allow-origins=*");
            options.addArguments("--ignore-ssl-errors=ye");
            options.addArguments("--ignore-certificate-errors");

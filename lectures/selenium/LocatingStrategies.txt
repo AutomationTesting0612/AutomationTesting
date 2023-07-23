@@ -8,3 +8,11 @@ WebDriver uses the set of locating strategies for specifying location of a parti
 6. By Partial Link Text
 7. By CSS
 8. By Xpath
+
+2 types of xpath
+
+  Absolute
+     //div//div//div[3]//div
+     We don't use absolute xpath
+
+  Dynamic
