@@ -19,14 +19,13 @@ public class LoginStepDef extends TestBase {
 
     @And("^Enter the password$")
     public void enterThePassword() {
-        driver.findElement(By.xpath(properties.getProperty("password"))).sendKeys(properties.getProperty("passwordValue"));
-
+        login.enterUserName();
+        enterThePassword();
     }
 
     @When("^Enter the username$")
     public void enterTheUsername() {
-        driver.findElement(By.xpath(properties.getProperty("username"))).sendKeys(properties.getProperty("usernameValue"));
-
+        login.enterPassword();
     }
 
     @And("^click on the login button$")
