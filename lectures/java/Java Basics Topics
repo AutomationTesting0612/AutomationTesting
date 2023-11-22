@@ -1,25 +1,16 @@
-Here are some basic topics in Java that are important for beginners:
-
-1. Variables and Data Types: Learn about different data types in Java, such as int, double, boolean, etc., and how to declare and use variables.
-
-2. Operators: Understand the various operators in Java, including arithmetic, assignment, comparison, logical, etc., and how to use them in expressions.
-
-Control Flow Statements: Explore control flow statements like if-else, for loop, and how they can be used to control the flow of program execution.
-
-3. Arrays: Learn about arrays, how to declare and initialize them, and how to perform common operations like accessing array elements, iterating over arrays, etc.
-
-4. Classes and Objects: Understand the concept of classes and objects in object-oriented programming. Learn how to define classes, create objects, and access their properties and methods.
-
-5. Methods: Explore methods, how to define them, pass arguments, return values, and call them from different parts of the program.
-
-6. Strings: Understand the String class in Java and how to work with strings, including concatenation, length, substring, etc.
-
-7. Exception Handling: Learn about handling exceptions in Java using try-catch blocks, understanding checked and unchecked exceptions, and how to handle exceptions gracefully.
-
-8. Input and Output: Explore different ways to read input from the user and display output, including using the Scanner class, reading and writing files, etc.
-
-9. Basic Object-Oriented Concepts: Familiarize yourself with concepts like inheritance, polymorphism, encapsulation, and abstraction.
-
-10. Packages and Imports: Learn how to organize your code into packages and use import statements to access classes from different packages.
-
-11. Basic File Operations: Understand how to read from and write to files, create directories, and perform basic file operations in Java.
+1. Syntax, Convention
+2. Data Type, Variable
+3. Operator
+4. OOPs
+5. Enum, Interface, Abstract classes
+6. Collection, Array, Iterator
+    List
+    Set
+7. Conditional statement
+8. Loop statement
+9. packages
+10. Access modifier
+11. Exception Handling
+12. Seerialization
+13. File handling
+14. String, String Builder, String Buffer

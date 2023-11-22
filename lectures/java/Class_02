@@ -18,7 +18,7 @@ javac compiling the HelloWorld.java class and generate teh byte code. Now JVM ru
 
 ---------------------------JVM/JRE/JDK----------------------------------
 
-JVM :- a) JVM is java virtual machine which doesn't physical exist.4
+JVM :- a) JVM is java virtual machine which doesn't physical exist.
 b) It provides the environment in which byte code gets execute.
 
 
