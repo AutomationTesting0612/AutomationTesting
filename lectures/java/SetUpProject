@@ -56,3 +56,10 @@ local word means the code is present in only your machine and not visible to
 3. git commit -m "text message"  --> This will commit your changes with message but it will not push the code in remote
 4. git push --> This will push the code in remote
 
+#If you want to clone the AutomationTesting
+
+1. Go to file of Intellij
+2. Click on New button and select Project from Version Control
+3. https://github.com/AutomationTesting0612/AutomationTesting.git
+4. Click on clone button
+
