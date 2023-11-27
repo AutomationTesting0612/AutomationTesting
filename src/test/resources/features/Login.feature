@@ -1,4 +1,4 @@
-@Login @Regression
+@Login
 @Sanity
 Feature: Test login functionality
   Scenario: Verify User should be able to login to the Assure Docs application

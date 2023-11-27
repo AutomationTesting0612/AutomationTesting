@@ -13,24 +13,24 @@ import java.io.*;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(dryRun = false, features = {"src/test/resources/features"}, glue = {"step.def"},
-        tags = "@Home", plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
+        tags = "@ForgotPassword", plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
         monochrome = true
 
 )
 public class Run {
 
-    @AfterClass
-    public static void writeExtentReport() throws FileNotFoundException {
-        try {
-            InputStream inputStream = Files.newInputStream(Paths.get("config.xml"));
-            Reporter.loadXMLConfig(inputStream.toString());
-        } catch (IllegalArgumentException io) {
-            io.printStackTrace();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
+//    @AfterClass
+//    public static void writeExtentReport() throws FileNotFoundException {
+//        try {
+//            InputStream inputStream = Files.newInputStream(Paths.get("config.xml"));
+//            Reporter.loadXMLConfig(inputStream.toString());
+//        } catch (IllegalArgumentException io) {
+//            io.printStackTrace();
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//    }
 }
 
 
