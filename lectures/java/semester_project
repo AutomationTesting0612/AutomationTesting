@@ -1,0 +1,62 @@
+Employee Payroll system
+
+1. Abstract Employee class
+
+      private String name; id;
+	  construcctor(name, id)
+	  getter method
+	 public
+	 abstract double calaculateSalary()
+
+
+2. FullfTimeEmployee extends Employee
+
+    private double monthlySalary;
+    public 	FullfTimeEmployee(String name, String id, double monthlySalary) {
+
+	super(name, id);
+	this.monthlySalary=monthlySalary;
+	}
+
+
+	@override
+	calaculateSalary()
+
+
+3. PartTimeEmployee extends Employee
+
+   private int workingHours;
+   private double hourlyRate;
+
+   public PartTimeEmployee(String name, String id, int workingHours, double hourlyRate){
+   super(name, id)
+   this
+   }
+
+4. PayRoll System
+
+    private ArrayList<Employee> employeeList;
+
+	public PayRoll() {
+
+	employeeList= new ArrayList<>();
+
+	public addEmployee(Employee employee) {
+	employeeList.add(employee);
+
+
+	}
+
+	public removeEmployee(int id) {
+	Employee employeeToRemove = null;
+	for (Employee employee: employeeList) {
+	if(employee.getId()==id) {
+
+	employeeToRemove=employee;
+	}
+
+	if (employeeToRemove!=null) {
+
+	employeeList.remove(employeeToRemove)
+
+	}

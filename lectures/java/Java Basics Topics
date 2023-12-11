@@ -2,6 +2,7 @@
 2. Data Type, Variable
 3. Operator
 4. OOPs
+    class, object, Inheritance, Polymorphism, Encapsulation, Abstraction, Interface, access modifier, Constructor
 5. Enum, Interface, Abstract classes
 6. Collection, Array, Iterator
     List
@@ -9,8 +10,7 @@
 7. Conditional statement
 8. Loop statement
 9. packages
-10. Access modifier
-11. Exception Handling
-12. Seerialization
-13. File handling
-14. String, String Builder, String Buffer
+10. Exception Handling
+11. Serialization
+12. File handling
+13. String, String Builder, String Buffer

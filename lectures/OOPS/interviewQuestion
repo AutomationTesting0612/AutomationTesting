@@ -1,0 +1,58 @@
+OOps Interview Question
+
+1. How many classes have a single java file
+2. Can we compile a java program without main method
+3. Why we require main method in java?
+4. Who is responsible to call main method in java
+5. What helps to java to write once and run anywhere
+6. Can we run java program without main method?
+7. What is the difference between jvm and jdk?
+8. What are the wrapper classes in java?
+9. What would happen if I don't write the static with main method.
+10. Can we have multiple main method in a classes
+11. Can you explain the Method Overloading
+12. Can we have multiple catch block with try block
+13. We have demo class with main method. we have variable as y=10/0 and we have catch block and second it catched airthmetic exception
+What is the output of the class.
+14. What is the diff between Array and arraylist?
+15. Can we example where we prefer array over arraylist
+16. Why Map is not considered as collection
+Describe the purpose and use of access modifiers (e.g., public, private, protected, default) in Java classes and members.
+
+What is inheritance in Java? How does it promote code reuse and hierarchy?
+
+Explain the "extends" keyword.
+Discuss single inheritance vs. multiple inheritance in Java.
+How does Java support multiple inheritance through interfaces? Provide an example.
+
+What is polymorphism, and how is it implemented in Java? Explain with examples.
+
+Method overloading vs. method overriding.
+What is the "super" keyword used for?
+What is an abstract class in Java? How does it differ from an interface?
+
+Can you create an object of an abstract class? Why or why not?
+
+What is the purpose of the "final" keyword in Java, and where can it be applied?
+
+Explain the concept of method overriding in Java. When and why would you use it?
+
+What is a constructor in Java? How does it differ from a regular method?
+
+Default constructor vs. parameterized constructor.
+How does Java handle garbage collection? Discuss the role of the "finalize" method.
+What is the "this" keyword in Java, and how is it used?
+Describe the "static" keyword in Java. What is a static method or variable?
+What is composition in Java, and how does it differ from inheritance?
+Explain the purpose and use of the "interface" keyword in Java.
+What are abstract methods, and how are they declared in Java interfaces?
+Discuss the concept of method overloading in Java, including rules and examples.
+How does Java support method overloading based on the number and types of parameters?
+What is method hiding in Java, and how is it different from method overriding?
+How can you prevent a class from being inherited in Java?
+What is a package in Java, and why is it useful for organizing code?
+What is the difference between a checked exception and an unchecked exception in Java?
+Explain the purpose of the "try," "catch," and "finally" blocks in exception handling.
+How does Java handle runtime exceptions and errors?
+What is the purpose of the "throw" and "throws" keywords in Java?
+Discuss the importance of method signatures and return types in method overriding and overloading.
