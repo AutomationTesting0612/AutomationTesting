@@ -6,10 +6,12 @@ Feature: Home Page functionality
     And click on the login button
     Then User should be able to navigate to the home page
 
-
+#Hooks(browser open, URL) ---> BackGround(username, password, click) --> scenario--> Hooks(@After_
   Scenario: Verify user should be able to navigate to home page
     Then validate the title
 
+
+#  Hooks(browser open, URL) ---> BackGround(username, password, click) --> scenario--> Hooks(@After_
 
 @Sanity
   Scenario: Verify user should be able to navigate to home page

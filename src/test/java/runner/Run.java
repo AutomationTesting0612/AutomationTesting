@@ -1,19 +1,13 @@
 package runner;
 
-import com.cucumber.listener.Reporter;
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import org.junit.AfterClass;
 import org.junit.runner.RunWith;
-
-import java.io.*;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(dryRun = false, features = {"src/test/resources/features"}, glue = {"step.def"},
-        tags = "@ForgotPassword", plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
+        tags = "@Login",
+//        plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
         monochrome = true
 
 )

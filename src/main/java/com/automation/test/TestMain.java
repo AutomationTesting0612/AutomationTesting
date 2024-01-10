@@ -1,12 +1,7 @@
 package com.automation.test;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TestMain {
     public static void main(String[] args) {
@@ -28,8 +23,8 @@ public class TestMain {
             System.out.println(s);
         }
 
-        WebDriver driver = new ChromeDriver();
-        List<WebElement> list = driver.findElements(By.xpath("dfsfs"));
+//        WebDriver driver = new ChromeDriver();
+//        List<WebElement> list = driver.findElements(By.xpath("dfsfs"));
 
 
 

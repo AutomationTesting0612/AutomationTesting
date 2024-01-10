@@ -1,7 +1,5 @@
 package com.automation.testing;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-
 public class AssignmentOperator {
 
      static int num1=10; ///you put 10 into num1 variable which is of int data type

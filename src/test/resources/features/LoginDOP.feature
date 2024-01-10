@@ -1,6 +1,6 @@
 @Login
 @Sanity
-Feature: Test login functionality
+Feature: Test login functionality for Fluent DOP
   Scenario Outline: Verify User should be able to login to the Assure Docs application
     When Enter the username "<username>"
     And Enter the password "<password>"

@@ -1,13 +1,14 @@
-package pom;
+package fluentDOP;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import pom.Home;
+import pom.Login;
 import step.def.TestBase;
 
-public class Login extends TestBase {
+public class LoginFluent extends TestBase {
 
     WebDriver driver;
 
@@ -20,21 +21,27 @@ public class Login extends TestBase {
     @FindBy(xpath ="//input[@id='login-button']")
     private WebElement submit;
 
-    public Login(WebDriver driver) {
+    public LoginFluent(WebDriver driver) {
+        this.driver=driver;
         PageFactory.initElements(driver, this);
     }
 
-
-    public void enterUserName(String text) {
+    public LoginFluent enterUserName(String text) {
         loginField.sendKeys(text);
+        return this;
     }
 
-    public void enterPassword(String text) {
+    public LoginFluent enterPassword(String text) {
         password.sendKeys(text);
+        return this;
     }
 
-    public void submitButton() {
+    public HomeFluent submitButton() {
         submit.click();
+        return new HomeFluent(driver);
     }
 
+    public static LoginFluent using(WebDriver driver) {
+        return new LoginFluent(driver);
+    }
 }

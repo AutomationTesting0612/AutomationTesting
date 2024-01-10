@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.AssureDocs</groupId>
-    <artifactId>AssureDocs</artifactId>
+    <groupId>com.AutomationTesting</groupId>
+    <artifactId>AutomationTesting</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -34,7 +34,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.8.1</version>
+            <version>4.16.1</version>
         </dependency>
         <dependency>
             <groupId>com.vimalselvam</groupId>
@@ -45,12 +45,51 @@
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>3.1.2</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>httpclient</artifactId>
+                    <groupId>org.apache.httpcomponents</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>gson</artifactId>
+                    <groupId>com.google.code.gson</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.3.3</version>
+            <version>5.6.3</version>
         </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.4.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.16.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents.client5/httpclient5 -->
+        <dependency>
+            <groupId>org.apache.httpcomponents.client5</groupId>
+            <artifactId>httpclient5</artifactId>
+            <version>5.2.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.brotli/dec -->
+        <dependency>
+            <groupId>org.brotli</groupId>
+            <artifactId>dec</artifactId>
+            <version>0.1.1</version>
+        </dependency>
+
+
 
     </dependencies>
 
@@ -66,6 +105,15 @@
                 <include>*Run*</include>
             </includes>
             </configuration>
+            <executions>
+                <execution>
+                    <configuration>
+                        <argLine>
+                            java --add-opens java.base/java.lang=ALL-UNNAMED
+                        </argLine>
+                    </configuration>
+                </execution>
+            </executions>
             </plugin>
 
             <plugin>
@@ -91,6 +139,16 @@
                         <goals>
                             <goal>verify</goal>
                         </goals>
+                        <configuration>
+                            <argLine>
+                                -javaagent:${settings.localRepository}/com/github/jbellis/jamm/0.3.2/jamm-0.3.2.jar
+                                --add-opens java.base/java.lang=ALL-UNNAMED
+                                --add-opens java.base/java.util=ALL-UNNAMED
+                                --add-opens java.base/java.lang.reflect=ALL-UNNAMED
+                                --add-opens java.base/java.text=ALL-UNNAMED
+                                --add-opens java.desktop/java.awt.font=ALL-UNNAMED
+                            </argLine>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

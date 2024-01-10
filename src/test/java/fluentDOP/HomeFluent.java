@@ -1,12 +1,12 @@
-package pom;
+package fluentDOP;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import step.def.TestBase;
 
-public class Home extends TestBase {
+public class HomeFluent extends TestBase {
 
-    public Home(WebDriver driver) {
+    public HomeFluent(WebDriver driver) {
         this.driver=driver;
         PageFactory.initElements(driver, this);
     }

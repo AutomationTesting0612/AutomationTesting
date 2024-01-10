@@ -1,8 +1,5 @@
 package com.automation.test;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 public interface Animal {
 
     public void walk(); //non-implemented/abstract method
