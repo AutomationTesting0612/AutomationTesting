@@ -3,16 +3,16 @@ Employee Payroll system
 1. Abstract Employee class
 
       private String name; id;
-	  construcctor(name, id)
+	  constructor(name, id)
 	  getter method
-	 public
-	 abstract double calaculateSalary()
+	  public
+	  abstract double calculateSalary()
 
 
-2. FullfTimeEmployee extends Employee
+2. FullTimeEmployee extends Employee
 
     private double monthlySalary;
-    public 	FullfTimeEmployee(String name, String id, double monthlySalary) {
+    public fullTimeEmployee(String name, String id, double monthlySalary) {
 
 	super(name, id);
 	this.monthlySalary=monthlySalary;
