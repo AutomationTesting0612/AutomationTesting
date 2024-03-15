@@ -1,4 +1,4 @@
-WebDriver uses the set of locating strategies for specifying location of a particular wen element
+WebDriver uses the set of locating strategies for specifying location of a particular web element
 
 1. By ID
 2. By Name

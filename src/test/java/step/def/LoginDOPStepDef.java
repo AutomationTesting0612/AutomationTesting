@@ -3,6 +3,8 @@ package step.def;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.When;
 import fluentDOP.LoginFluent;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import static step.def.TestBase.driver;
 

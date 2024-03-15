@@ -4,7 +4,7 @@
 
    Features of Java
 
-1. Platform Independent :- When Java program runs, the java compiler create the bytecode(.class file). JVM execute this byte code and run the program.
+1. Platform Independent:- When Java program runs, the java compiler create the bytecode(.class file). JVM execute this byte code and run the program.
 
     HelloWorld.java -----javac ---HelloWorld.class(bytecode)------JVM-----mac, windows, safari.
 
