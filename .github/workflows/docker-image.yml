@@ -3,7 +3,7 @@ name: Docker CI
 on:
   push:
     branches:
-      - main
+      - forgotPasswordFunctionality
 
 jobs:
   build-and-test:
