@@ -1,4 +1,5 @@
-@Home @Sanity
+@Home
+@Sanity
 Feature: Home Page functionality
   Background: Test the login Functionality
     When Enter the username

@@ -13,6 +13,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: compile
+        run: |
+            mv clean compile
+
+      - name: unit
+        run: |
+          mv clean verify
+          
+          
+
       - name: Build Docker image
         run: |
           docker build -t selenium-docker .
@@ -25,3 +35,6 @@ jobs:
           git commit -a -m "added report"
           git format-patch --to=akhil.sharma0612@gmail.com HEAD~..HEAD
           git push
+
+      - name: deploy
+

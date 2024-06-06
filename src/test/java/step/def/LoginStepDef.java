@@ -11,10 +11,6 @@ import fluentDOP.LoginFluent;
 import org.openqa.selenium.By;
 import pom.Login;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 public class LoginStepDef extends TestBase {
 

@@ -1,41 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<extentreports>
-    <configuration>
-        <!-- report theme --> <!-- standard, dark -->
-        <theme>standard</theme>
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<extentreports>-->
+<!--    <configuration>-->
+<!--        &lt;!&ndash; report theme &ndash;&gt; &lt;!&ndash; standard, dark &ndash;&gt;-->
+<!--        <theme>standard</theme>-->
 
-        <!-- document encoding -->  <!-- defaults to UTF-8 -->
-        <encoding>UTF-8</encoding>
+<!--        &lt;!&ndash; document encoding &ndash;&gt;  &lt;!&ndash; defaults to UTF-8 &ndash;&gt;-->
+<!--        <encoding>UTF-8</encoding>-->
 
-        <!-- protocol for script and stylesheets -->   <!-- defaults to https -->
-        <protocol>https</protocol>
+<!--        &lt;!&ndash; protocol for script and stylesheets &ndash;&gt;   &lt;!&ndash; defaults to https &ndash;&gt;-->
+<!--        <protocol>https</protocol>-->
 
-        <!-- title of the document -->
-        <documentTitle>Selenium Cucumber Framework</documentTitle>
+<!--        &lt;!&ndash; title of the document &ndash;&gt;-->
+<!--        <documentTitle>Selenium Cucumber Framework</documentTitle>-->
 
-        <!-- report name - displayed at top-nav -->
-        <reportName>Functional Testing report</reportName>
+<!--        &lt;!&ndash; report name - displayed at top-nav &ndash;&gt;-->
+<!--        <reportName>Functional Testing report</reportName>-->
 
-        <!-- global date format override -->  <!-- defaults to yyyy-MM-dd -->
-        <dateFormat>yyyy-MM-dd</dateFormat>
+<!--        &lt;!&ndash; global date format override &ndash;&gt;  &lt;!&ndash; defaults to yyyy-MM-dd &ndash;&gt;-->
+<!--        <dateFormat>yyyy-MM-dd</dateFormat>-->
 
-        <!-- global time format override -->   <!-- defaults to HH:mm:ss -->
-        <timeFormat>HH:mm:ss</timeFormat>
+<!--        &lt;!&ndash; global time format override &ndash;&gt;   &lt;!&ndash; defaults to HH:mm:ss &ndash;&gt;-->
+<!--        <timeFormat>HH:mm:ss</timeFormat>-->
 
-        <!-- custom javascript -->
-        <scripts>
-            <![CDATA[
-        $(document).ready(function() {
+<!--        &lt;!&ndash; custom javascript &ndash;&gt;-->
+<!--        <scripts>-->
+<!--            <![CDATA[-->
+<!--        $(document).ready(function() {-->
 
-        });
-      ]]>
-        </scripts>
+<!--        });-->
+<!--      ]]>-->
+<!--        </scripts>-->
 
-        <!-- custom styles -->
-        <styles>
-            <![CDATA[
+<!--        &lt;!&ndash; custom styles &ndash;&gt;-->
+<!--        <styles>-->
+<!--            <![CDATA[-->
 
-      ]]>
-        </styles>
-    </configuration>
-</extentreports>
+<!--      ]]>-->
+<!--        </styles>-->
+<!--    </configuration>-->
+<!--</extentreports>-->

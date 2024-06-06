@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.io.File;
 import java.util.List;
 
 public class SeleniumTest {
@@ -14,17 +15,16 @@ public class SeleniumTest {
     public static void main (String args[]) {
 
         WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
 
-        WebDriver driver = new ChromeDriver(options);
+        WebDriver driver = new ChromeDriver();
+        String path =System.getProperty("user.dir")+ File.separator+"test";
+
+        System.getProperty("user.dir");
 
 
-        driver.get("https://www.facebook.com/");
+        driver.get("https://tus.io/demo");
         driver.manage().window().maximize();
-        List<WebElement> element = driver.findElements(By.xpath("//input"));
-        for (int i=0;i< element.size(); i++) {
-            System.out.println(element);
-        }
+        WebElement element = driver.findElement(By.xpath("//input[@id='P0-0']"));
+        element.sendKeys(path);
     }
 }
