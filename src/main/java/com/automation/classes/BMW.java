@@ -1,8 +1,21 @@
 package com.automation.classes;
 
 public class BMW implements Car {
+
+
+    String name = "This IS BMW car";
+
+    char ch1 = 'M';
+
+    boolean haveBackCamera;
     @Override
     public void tyre() {
+     char[] ch =   name.toCharArray();
+     for (char c : ch) {
+         System.out.println(c);
+     }
+
+//        System.out.println(ch.);
 
     }
 
@@ -24,4 +37,9 @@ public class BMW implements Car {
     private void test() {
 
     }
+
+    public boolean backCamera(){
+        return haveBackCamera;
+    }
+
 }

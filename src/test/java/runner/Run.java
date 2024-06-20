@@ -12,19 +12,6 @@ import org.junit.runner.RunWith;
 
 )
 public class Run {
-
-//    @AfterClass
-//    public static void writeExtentReport() throws FileNotFoundException {
-//        try {
-//            InputStream inputStream = Files.newInputStream(Paths.get("config.xml"));
-//            Reporter.loadXMLConfig(inputStream.toString());
-//        } catch (IllegalArgumentException io) {
-//            io.printStackTrace();
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//    }
 }
 
 
