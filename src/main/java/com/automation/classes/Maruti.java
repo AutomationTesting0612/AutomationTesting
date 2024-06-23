@@ -26,6 +26,10 @@ public class Maruti  implements Car{
 
     }
 
+    public boolean haveBackCamera() {
+        return false;
+    }
+
 }
 
 //class

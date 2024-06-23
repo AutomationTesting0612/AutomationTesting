@@ -6,7 +6,8 @@ public class Multiply {
         MathematicProblem problem = new MathematicProblem();
 //        Animal animal = new Animal();
 
-       Car car =  new BMW();
+       BMW car =  new BMW();
+       car.tyre();
 
        //We cannot create the object of Abstract and interface
 
