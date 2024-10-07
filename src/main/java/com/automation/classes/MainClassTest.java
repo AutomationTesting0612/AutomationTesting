@@ -1,6 +1,6 @@
 package com.automation.classes;
 
-import loopPratice.SwitchStatement;
+//import loopPratice.SwitchStatement;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -32,7 +32,7 @@ public class MainClassTest {
 //        SwitchStatement.switchMethod();
 //        SwitchStatement.dayWeek();
 
-        SwitchStatement statement= new SwitchStatement();
+//        SwitchStatement statement= new SwitchStatement();
 //        statement.num=4;
 //        statement.dayWeek();
 

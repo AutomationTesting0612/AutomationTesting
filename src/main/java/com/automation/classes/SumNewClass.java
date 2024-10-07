@@ -26,7 +26,7 @@ public class SumNewClass {
         }
         System.out.println("The third Statement" + name);
 
-        Test test = new Test(); //instance Variable---> Heap
+//        Test test = new Test(); //instance Variable---> Heap
     }
 
 }
