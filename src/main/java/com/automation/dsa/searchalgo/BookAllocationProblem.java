@@ -1,6 +1,7 @@
-package com.automation.leetcode;
+package com.automation.dsa.searchalgo;
 
 public class BookAllocationProblem {
+
 
 
 }

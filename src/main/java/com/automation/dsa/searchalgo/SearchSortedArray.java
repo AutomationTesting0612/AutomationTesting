@@ -1,4 +1,4 @@
-package com.automation.leetcode;
+package com.automation.dsa.searchalgo;
 
 public class SearchSortedArray {
 

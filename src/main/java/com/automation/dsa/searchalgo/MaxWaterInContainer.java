@@ -1,4 +1,4 @@
-package com.automation.leetcode;
+package com.automation.dsa.searchalgo;
 
 import static java.lang.Math.min;
 import static java.lang.Math.max;

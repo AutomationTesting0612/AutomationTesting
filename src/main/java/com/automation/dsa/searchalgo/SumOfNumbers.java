@@ -1,4 +1,4 @@
-package com.automation.leetcode;
+package com.automation.dsa.searchalgo;
 
 import java.util.HashMap;
 import java.util.Map;
