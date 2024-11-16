@@ -15,6 +15,22 @@ javac compiling the HelloWorld.java class and generate teh byte code. Now JVM ru
 
 3. Object Oriented :- Everything in java is in form of object.
 
+4. Java is robust in nature
+
+   Java is a robust programming language because it can efficiently handle errors and unexpected situations, which ensures reliable application execution. Here are some reasons why Java is considered robust:
+   Strong memory management
+   Java uses automatic garbage collection to eliminate objects that are no longer in use, which reduces the likelihood of memory leaks.
+   Exception handling
+   Java's exception handling framework allows developers to manage runtime errors so that the program doesn't crash unexpectedly.
+   Type checking at compile-time
+   Java performs strict type checking during compilation to catch errors early in the development cycle.
+   Backward compatibility
+   Older Java applications can run on newer versions, which allows developers to adopt new features without sacrificing compatibility.
+   Secure
+   Java applications are secure because of compile-time and runtime checking of source code and bytecode.
+   Platform-independent
+   Java is compiled to bytecode that can run on any device with a Java Virtual Machine (JVM).
+
 
 ---------------------------JVM/JRE/JDK----------------------------------
 
