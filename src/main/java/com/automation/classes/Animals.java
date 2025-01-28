@@ -47,6 +47,9 @@ public class Animals {
         Practice1 practice1 = new Practice1(); //pratice1 is the instance variable name
 
 
+
+
+
     }
 
 

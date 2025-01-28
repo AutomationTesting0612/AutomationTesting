@@ -20,16 +20,16 @@ public class LoginStepDef extends TestBase {
 
     Login login = new Login(driver);
 
-//    @And("^Enter the password$")
-//    public void enterThePassword() {
-//        login.enterUserName();
-//        enterThePassword();
-//    }
+    @And("^Enter the password$")
+    public void enterThePassword() {
+        login = new Login(driver);
+        login.enterPassword("secret_sauce");
+    }
 
     @When("^Enter the username$")
     public void enterTheUsername() {
         login = new Login(driver);
-        login.enterUserName("test");
+        login.enterUserName("standard_user");
     }
 
     @And("^click on the login button$")

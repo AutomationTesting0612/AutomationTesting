@@ -6,7 +6,6 @@ public class Sum {
 
     private int number2;
 
-
     private int number3;
 
 

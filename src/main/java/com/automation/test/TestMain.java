@@ -6,8 +6,6 @@ import java.util.ArrayList;
 public class TestMain {
     public static void main(String[] args) {
 
-
-
 //       A a= new A();
 //        System.out.println(a.num1=20);
 //        System.out.println(a.num2=30);
