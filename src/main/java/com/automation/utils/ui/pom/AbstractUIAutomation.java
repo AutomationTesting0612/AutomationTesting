@@ -221,11 +221,6 @@ public abstract class  AbstractUIAutomation {
 
 
 
-//    ACbe3b1500e70480df1e40ae2c72d32768
-//    c59b30e7bfa54bbd8515b259ed418081
-
-
-
     public void closeBrowser() {
         driver.quit();
         driver.close();
