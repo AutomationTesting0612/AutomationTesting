@@ -219,8 +219,6 @@ public abstract class  AbstractUIAutomation {
 
     }
 
-
-
     public void closeBrowser() {
         driver.quit();
         driver.close();
