@@ -1,51 +1,48 @@
-//package com.automation.utils.ui.controller;
+package com.automation.utils.ui.controller;
+
+import com.automation.utils.ui.model.UIModel;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerRecord;
+import org.springframework.http.ResponseEntity;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Properties;
+
+@RestController
+public class UIControllerClass {
+
+//    private final DynamicWebAutomation automationService;
+
+//    @Autowired
+//    private DataSetService dataSetService;
+    private final KafkaTemplate<String, String> kafkaTemplate;
+
+    private final ObjectMapper objectMapper = new ObjectMapper();
+
+    public UIControllerClass(KafkaTemplate<String, String> kafkaTemplate) {
+        this.kafkaTemplate = kafkaTemplate;
+//        this.automationService = new DynamicWebAutomation(browser); // Defaulting to Chrome
+    }
 //
 //
-//import com.automation.model.ScenarioMain;
-//import com.automation.utils.ui.DataSetService;
-//import com.automation.utils.ui.model.UIModel;
-//import com.fasterxml.jackson.databind.ObjectMapper;
-//import org.apache.kafka.clients.producer.KafkaProducer;
-//import org.apache.kafka.clients.producer.ProducerRecord;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.http.HttpStatus;
-//import org.springframework.http.ResponseEntity;
-//import org.springframework.kafka.core.KafkaTemplate;
-//import org.springframework.web.bind.annotation.PostMapping;
-//import org.springframework.web.bind.annotation.RequestBody;
-//import org.springframework.web.bind.annotation.RestController;
-//
-//import java.util.Properties;
-//
-//@RestController
-//public class UIControllerClass {
-//
-////    private final DynamicWebAutomation automationService;
-//
-////    @Autowired
-////    private DataSetService dataSetService;
-//    private final KafkaTemplate<String, String> kafkaTemplate;
-//
-//    private final ObjectMapper objectMapper = new ObjectMapper();
-//
-//    public UIControllerClass(KafkaTemplate<String, String> kafkaTemplate) {
-//        this.kafkaTemplate = kafkaTemplate;
-////        this.automationService = new DynamicWebAutomation(browser); // Defaulting to Chrome
-//    }
-//
-//
-//    @PostMapping("create")
-//    public void save(@RequestBody UIModel uiModel) {
-//        try {
-//            String message = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(uiModel);
-//            KafkaProducer<String, String> producer = new KafkaProducer<>(getKafkaProps());
-//            producer.send(new ProducerRecord<>("ui-actions", message));
-//            producer.close();
-//            ResponseEntity.ok("Automation executed successfully!");
-//        } catch (Exception e) {
-//            ResponseEntity.status(500).body("Automation failed: " + e.getMessage());
-//        }
-//    }
+
+
+@PostMapping("create")
+    public void save(@RequestBody UIModel uiModel) {
+        try {
+            String message = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(uiModel);
+            KafkaProducer<String, String> producer = new KafkaProducer<>(getKafkaProps());
+            producer.send(new ProducerRecord<>("ui-actions", message));
+            producer.close();
+            ResponseEntity.ok("Automation executed successfully!");
+        } catch (Exception e) {
+            ResponseEntity.status(500).body("Automation failed: " + e.getMessage());
+        }
+    }
 //
 //    @PostMapping("api")
 //    public ResponseEntity<ScenarioMain> save(@RequestBody ScenarioMain scenarioMain) {
@@ -102,11 +99,11 @@
 ////        }
 ////    }
 //
-//    private static Properties getKafkaProps() {
-//        Properties props = new Properties();
-//        props.put("bootstrap.servers", "localhost:9092");
-//        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-//        props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-//        return props;
-//    }
-//}
+    private static Properties getKafkaProps() {
+        Properties props = new Properties();
+        props.put("bootstrap.servers", "localhost:9092");
+        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        return props;
+    }
+}

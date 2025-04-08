@@ -4,6 +4,7 @@ import com.automation.model.DataList;
 import com.automation.model.DataSet;
 import com.automation.model.ScenarioMain;
 import com.automation.utils.ui.model.UIModel;
+import com.automation.utils.ui.pom.DynamicWebAutomation;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -62,35 +63,35 @@ public class SpringapiApplication {
         SpringApplication.run(SpringapiApplication.class, args);
     }
 
-//    @KafkaListener(topics = "ui-actions", groupId = "your-group-id")
-//    public void consumeMessage2(String message) {
-//        try {
-//            UIModel uiModel = objectMapper.readValue(message, UIModel.class);
-//            uiModelMessages.add(uiModel);
-////            setupExtentReports();
-//
-//            List<Map<String, String>> actionSequence = objectMapper.readValue(
-//                    objectMapper.writeValueAsString(uiModel.getActions()),
-//                    new TypeReference<List<Map<String, String>>>() {}
-//            );
-//
-//            // Run automation dynamically
-//            DynamicWebAutomation automation = new DynamicWebAutomation(uiModel.getBrowser());
-//
-//
-//            automation.executeAutomation(actionSequence, uiModel.getFeatureName());
-////                    test.log(Status.PASS, "Step: " + actionType + " | Locator: " + xpath + " | Value: " + value);
-//            String extentReportContent = "";
-//            try {
-//                extentReportContent = new String(Files.readAllBytes(Paths.get("KafkaTestReport.html")));
-//            } catch (IOException e) {
-//                System.err.println("Failed to read Extent Report: " + e.getMessage());
-//            }
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
+    @KafkaListener(topics = "ui-actions", groupId = "your-group-id1")
+    public void consumeMessage2(String message) {
+        try {
+            UIModel uiModel = objectMapper.readValue(message, UIModel.class);
+            uiModelMessages.add(uiModel);
+//            setupExtentReports();
+
+            List<Map<String, String>> actionSequence = objectMapper.readValue(
+                    objectMapper.writeValueAsString(uiModel.getActions()),
+                    new TypeReference<List<Map<String, String>>>() {}
+            );
+
+            // Run automation dynamically
+            DynamicWebAutomation automation = new DynamicWebAutomation(uiModel.getBrowser());
+
+
+            automation.executeAutomation(actionSequence, uiModel.getFeatureName());
+//                    test.log(Status.PASS, "Step: " + actionType + " | Locator: " + xpath + " | Value: " + value);
+            String extentReportContent = "";
+            try {
+                extentReportContent = new String(Files.readAllBytes(Paths.get("KafkaTestReport.html")));
+            } catch (IOException e) {
+                System.err.println("Failed to read Extent Report: " + e.getMessage());
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 //    @PostConstruct
 
         @KafkaListener(topics = "QATransaction_API_PAYLOAD", groupId = "your-group-id")

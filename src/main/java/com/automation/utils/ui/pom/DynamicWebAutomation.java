@@ -6,15 +6,19 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.time.Duration;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class DynamicWebAutomation extends AbstractUIAutomation {
 
@@ -38,12 +42,8 @@ public class DynamicWebAutomation extends AbstractUIAutomation {
             String actionType = action.get("action");
             String xpath = action.get("xpath");
             String value = action.get("value");
-            String expectedTitle = action.get("validateTitle");
-            String title = action.get("validateTitle");
-            String browsertype = action.get("browser");
-
-
-
+            String pass = action.get("password");
+            String mainWindowHandle = driver.getWindowHandle();
 
             try {
                 switch (actionType.toLowerCase()) {
@@ -63,14 +63,23 @@ public class DynamicWebAutomation extends AbstractUIAutomation {
                         scrollToElement(xpath);
                         logStep(Status.PASS, actionType, "Scrolled to element: " + xpath);
                         break;
-                    case "title":
-                        if (!validateTitle(expectedTitle)) {
-                            logStep(Status.FAIL, actionType, "Title validation failed! Expected: " + expectedTitle +
-                                    " | Found: " + driver.getTitle());
-                            extent.flush();
+                    case "otp":
+                        getOtpFromEmail(value, pass, xpath);
+                        logStep(Status.PASS, actionType, "Scrolled to element: " + xpath);
+                        break;
+                    case "window":
+                        switchToPopupWindow(driver, mainWindowHandle, 10);
+                    case "main":
+                        switchToMain();
+                    case "validate":
+                        if (!validate(xpath, value)) {
+                            logStep(Status.FAIL, actionType, "Validation failed! Expected: " + value +
+                                    " | Found: " + driver.findElement(By.xpath(xpath)).getText());
+
 //                            throw new AssertionError("Title validation failed!");
                         } else {
-                            logStep(Status.PASS, actionType, "Title validation successful: " + expectedTitle);
+                            logStep(Status.PASS, actionType, "Title validation failed! Expected: " + value +
+                                    " | Found: " + driver.findElement(By.xpath(xpath)).getText());
                         }
                         break;
                     default:
@@ -84,8 +93,8 @@ public class DynamicWebAutomation extends AbstractUIAutomation {
 
         }
 
-
-        closeBrowser();
+        extent.flush();
+//        closeBrowser();
     }
 
     private void validate(String validationType, String expected, String actual) {
@@ -120,10 +129,29 @@ public class DynamicWebAutomation extends AbstractUIAutomation {
     @Override
     public void openBrowser(String browserType) {
             if ("chrome".equalsIgnoreCase(browserType)) {
+                File file = new File("C:\\Users\\pc\\IdeaProjects\\AutomationTesting\\AdBlock.crx");
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--ignore-certificate-errors");
-                driver = new ChromeDriver();
+                options.setExperimentalOption("excludeSwitches", java.util.Arrays.asList("enable-automation"));
+                options.addExtensions(file);
+                options.addArguments("--disable-popup-blocking");
+                options.addArguments("--disable-infobars");
+                options.addArguments("--disable-notifications");
+                options.addArguments("--no-default-browser-check");
+                options.addArguments("--disable-save-password-bubble");  // Disable save password prompt
+                options.addArguments("--disable-password-generation");   // Disable password generation
+                options.addArguments("--disable-infobars");             // Remove infobar messages
+                driver = new ChromeDriver(options);
+                try { Thread.sleep(5000); } catch (InterruptedException e) {}
+
+//                 Get current window handles and close unwanted tabs
+                for (String handle : driver.getWindowHandles()) {
+                    driver.switchTo().window(handle);
+                    if (!driver.getCurrentUrl().contains("getadblock.com")) {
+                        driver.close();
+                    }
+                }
             } else if ("firefox".equalsIgnoreCase(browserType)) {
                 driver = new FirefoxDriver();
             } else if ("edge".equalsIgnoreCase(browserType)) {
@@ -135,6 +163,24 @@ public class DynamicWebAutomation extends AbstractUIAutomation {
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             driver.manage().window().maximize();
         }
+
+    public void switchToPopupWindow(WebDriver driver, String mainWindowHandle, long timeoutSeconds) {
+        new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds))
+                .until(d -> d.getWindowHandles().size() > 1);
+
+        for (String handle : driver.getWindowHandles()) {
+            if (!handle.equals(mainWindowHandle)) {
+                driver.switchTo().window(handle);
+                driver.manage().window().maximize();
+                return;
+            }
+        }
+        throw new RuntimeException("Popup window did not appear");
+    }
+
+    private void switchToMain() {
+        driver.switchTo().window(mainWindowHandle);
+    }
 
 
 
