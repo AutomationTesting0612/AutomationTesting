@@ -1,0 +1,93 @@
+Step 1: Install Django REST Framework
+
+Run this inside your virtual environment:
+
+pip install djangorestframework
+
+✅ Step 2: Add REST Framework to Installed Apps
+
+Open myproject/settings.py and update:
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    # ✅ Add these
+    'rest_framework',
+    'myapp',
+]
+
+✅ Step 3: Create a Model (in myapp/models.py)
+
+Example: A simple Book model.
+
+from django.db import models
+
+class Book(models.Model):
+    title = models.CharField(max_length=200)
+    author = models.CharField(max_length=100)
+    published_date = models.DateField()
+
+    def __str__(self):
+        return self.title
+
+✅ Step 4: Run Migrations
+python manage.py makemigrations
+python manage.py migrate
+
+✅ Step 5: Create Serializer (in myapp/serializers.py)
+from rest_framework import serializers
+from .models import Book
+
+class BookSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Book
+        fields = '__all__'
+
+✅ Step 6: Create API Views (in myapp/views.py)
+from rest_framework import viewsets
+from .models import Book
+from .serializers import BookSerializer
+
+class BookViewSet(viewsets.ModelViewSet):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
+
+✅ Step 7: Register API Routes (in myproject/urls.py)
+
+Update your project’s urls.py:
+
+from django.contrib import admin
+from django.urls import path, include
+from rest_framework import routers
+from myapp.views import BookViewSet
+
+router = routers.DefaultRouter()
+router.register(r'books', BookViewSet)  # ✅ http://127.0.0.1:8000/books/
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include(router.urls)),   # ✅ include API routes
+]
+
+✅ Step 8: Create Superuser & Run Server
+python manage.py createsuperuser
+python manage.py runserver
+
+✅ Step 9: Test API
+
+Open browser or Postman:
+
+GET http://127.0.0.1:8000/books/ → List books
+
+POST http://127.0.0.1:8000/books/ → Create new book
+
+GET http://127.0.0.1:8000/books/1/ → Get book details
+
+PUT http://127.0.0.1:8000/books/1/ → Update book
+
+DELETE http://127.0.0.1:8000/books/1/ → Delete book

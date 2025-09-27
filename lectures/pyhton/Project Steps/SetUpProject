@@ -1,0 +1,95 @@
+step 1: Install Python & pip
+
+Check if you already have them:
+
+python --version
+pip --version
+
+
+If not installed, install Python 3.9+ (recommended).
+
+✅ Step 2: Create a Virtual Environment
+
+Best practice is to isolate dependencies in a virtual environment.
+
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On Linux/Mac:
+source venv/bin/activate
+# On Windows (PowerShell):
+venv\Scripts\activate
+
+✅ Step 3: Install Django
+pip install django
+
+
+Verify Django is installed:
+
+django-admin --version
+
+✅ Step 4: Create Django Project
+django-admin startproject myproject
+cd myproject
+
+
+This creates a folder like:
+
+myproject/
+    manage.py
+    myproject/
+        __init__.py
+        settings.py
+        urls.py
+        asgi.py
+        wsgi.py
+
+✅ Step 5: Run Development Server
+python manage.py runserver
+
+
+Now open your browser at 👉 http://127.0.0.1:8000/
+
+You should see the Django welcome page 🎉
+
+✅ Step 6: Create an App (inside project)
+
+Django apps are modules inside the project (like users, blog, etc.).
+
+python manage.py startapp myapp
+
+
+This creates:
+
+myapp/
+    admin.py
+    apps.py
+    models.py
+    tests.py
+    views.py
+
+✅ Step 7: Register App in Settings
+
+Open myproject/settings.py → add your app:
+
+INSTALLED_APPS = [
+    ...,
+    'myapp',
+]
+
+✅ Step 8: Create Database & Migrate
+python manage.py migrate
+
+
+This sets up the default SQLite database.
+
+✅ Step 9: Create Superuser (Admin Panel)
+python manage.py createsuperuser
+
+
+👉 Enter username, email, password.
+
+Run server again:
+
+python manage.py runserver

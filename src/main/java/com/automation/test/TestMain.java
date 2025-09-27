@@ -30,5 +30,8 @@ public class TestMain {
         ArrayList<String> arr2 = new ArrayList<String>();//Generic data Type
         arr2.add("23");
         arr1.add(23);
+
+        Animal an = new Cat();
+        an.run();
     }
 }

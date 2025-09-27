@@ -7,10 +7,11 @@ public interface Animal {
     public void eat();
 
     public void speak();
-//    jdk 7--> java 8
+
 
     default void run() {
 
+       System.out.println("The max speed of animal" + 200);
     }
 
 }
