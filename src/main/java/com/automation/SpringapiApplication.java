@@ -78,7 +78,6 @@ public class SpringapiApplication {
             // Run automation dynamically
             DynamicWebAutomation automation = new DynamicWebAutomation(uiModel.getBrowser());
 
-
             automation.executeAutomation(actionSequence, uiModel.getFeatureName());
 //                    test.log(Status.PASS, "Step: " + actionType + " | Locator: " + xpath + " | Value: " + value);
             String extentReportContent = "";

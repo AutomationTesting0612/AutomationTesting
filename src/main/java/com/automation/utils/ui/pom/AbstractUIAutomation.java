@@ -20,38 +20,6 @@ public abstract class  AbstractUIAutomation {
     protected String mainWindowHandle;
 
     public abstract void openBrowser(String browserType);
-//    {
-//        if (driver == null) {
-//            if ("chrome".equalsIgnoreCase(browserType)) {
-//            driver = new ChromeDriver();
-//                WebDriverManager.chromedriver().setup();
-//                ChromeOptions options = new ChromeOptions();
-////            options.addArguments("--start-maximized");
-//            options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36");
-                //           options.addArguments("--headless");
-//           options.addArguments("--remote-allow-origins=*");
-//           options.addArguments("--ignore-ssl-errors=ye");
-//                options.addArguments("--ignore-certificate-errors");
-//
-//           options.addArguments("--no-sandbox");
-//           options.addArguments("--disable-dev-shm-usage");
-//           options.addArguments("start-maximized");
-//                driver = new ChromeDriver();
-//            } else if ("firefox".equalsIgnoreCase(browserType)) {
-//                driver = new FirefoxDriver();
-//            } else if ("edge".equalsIgnoreCase(browserType)) {
-//                driver = new EdgeDriver();
-//            } else {
-//                throw new IllegalArgumentException("Unsupported browser type: " + browserType);
-//            }
-//
-//            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//            driver.manage().window().maximize();
-//        }
-
-
-
-//    }
 
     // Open a website dynamically
     public void openWebsite(String url) {
@@ -157,11 +125,6 @@ public abstract class  AbstractUIAutomation {
             return false;
         }
     }
-
-//    public void handleRadio(String xpath) {
-//       WebElement radioButton = driver.findElement(By.xpath(xpath));
-//       radioButton.click();
-//    }
 
     public void performRandomClicks() throws InterruptedException {
         Random random = new Random();

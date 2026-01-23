@@ -1,6 +1,7 @@
 package com.automation.def;
 
 import cucumber.api.java.en.When;
+import io.restassured.RestAssured;
 import org.openqa.selenium.By;
 
 public class RegisterStepdef extends TestBase {
