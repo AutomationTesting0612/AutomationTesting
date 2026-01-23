@@ -26,6 +26,7 @@ public class TestBase {
        if (properties.getProperty("browser").equalsIgnoreCase("chrome")) {
            WebDriverManager.chromedriver().setup(); //System.setproperty("webdriver.driver.
            ChromeOptions options = new ChromeOptions();
+           options.addArguments("--start-maximized");
 //           options.addArguments("--headless");
 //           options.addArguments("--remote-allow-origins=*");
 //           options.addArguments("--ignore-ssl-errors=ye");

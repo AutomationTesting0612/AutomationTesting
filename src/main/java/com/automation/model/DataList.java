@@ -1,0 +1,64 @@
+package com.automation.model;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.List;
+import java.util.Map;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class DataList {
+
+    @JsonProperty("baseUrl")
+    private String base_url;
+
+    @JsonProperty("endpoint")
+    private String endPoint;
+
+    @JsonProperty("mappingType")
+    private String mapping_type;
+
+    private Map<String, String> header;
+
+    private ScenarioModel scenario;
+
+    public String getBase_url() {
+        return base_url;
+    }
+
+    public void setBase_url(String base_url) {
+        this.base_url = base_url;
+    }
+
+    public String getMapping_type() {
+        return mapping_type;
+    }
+
+    public void setMapping_type(String mapping_type) {
+        this.mapping_type = mapping_type;
+    }
+
+    public String getEndPoint() {
+        return endPoint;
+    }
+
+    public void setEndPoint(String endPoint) {
+        this.endPoint = endPoint;
+    }
+
+    public Map<String, String> getHeader() {
+        return header;
+    }
+
+    public void setHeader(Map<String, String> header) {
+        this.header = header;
+    }
+
+    public ScenarioModel getScenario() {
+        return scenario;
+    }
+
+    public void setScenario(ScenarioModel scenario) {
+        this.scenario = scenario;
+    }
+}
